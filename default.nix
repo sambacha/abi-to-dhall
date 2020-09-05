@@ -1,5 +1,5 @@
 { pkgs ? import <nixpkgs> {} }: let
-  version = "1.0.1";
+  version = "1.0.2";
 
   inherit (pkgs) runCommand makeWrapper;
   inherit (pkgs.lib) optionalString makeBinPath;
@@ -26,7 +26,7 @@
   };
 
   dhall-haskell = let
-    version = "1.29.0";
+    version = "1.31.0";
   in pkgs.buildEnv {
     name = "dhall-haskell-${version}";
     ignoreCollisions = true;
